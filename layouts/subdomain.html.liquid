@@ -40,16 +40,10 @@
   </head>
   <body>
 
-    {% if space.guest_ideas %}
-      <div class="wrapper">
-        <img src="{{ space.logo }}" class="logo" alt="Logo">
-        {{ yield }}
-      </div>
-    {% else %}
-      <div class="wrapper">
-        <h1>This site requires <a href="http://rusic.readme.io/v1/docs/guest-ideas">guest ideas</a> to be enabled.</h1>
-      </div>
-    {% endif %}
+    <div class="wrapper">
+      <img src="{{ space.logo }}" class="logo" alt="Logo">
+      {{ yield }}
+    </div>
 
     <script src="{{ 'main.js' | javascript_url }}"></script>
   </body>
