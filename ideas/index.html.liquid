@@ -8,7 +8,7 @@
   <input type="hidden" name="idea[content]" value="BLANK">
 
   <div class="form-group">
-    {% if space.collect_name == 'true' %}
+    {% if space.collect_name == '1' %}
     <div class="form-field form-group__cell">
       <input
         type="text"
@@ -17,7 +17,7 @@
         placeholder="Your name">
     </div>
     {% endif %}
-    {% if space.collect_postcode == 'true' %}
+    {% if space.collect_postcode == '1' %}
     <div class="form-field form-group__cell">
       <input
         type="text"
@@ -54,4 +54,3 @@
     </a>
   </li>{% endif %}
 </ul>
-
