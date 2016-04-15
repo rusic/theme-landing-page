@@ -16,7 +16,7 @@
       {% endif %}
 
       {% if space.background_image != empty %}
-        body { background-image: {{ space.background_image }}; }
+        body { background-image: url({{ space.background_image }}); }
       {% endif %}
 
       {% if space.background_color == "" %}
