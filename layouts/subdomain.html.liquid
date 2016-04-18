@@ -40,26 +40,32 @@
   </head>
   <body>
 
-    {% if space.layout == 'one-column' %}
+    <div class="center">
+      <div class="center__reset">
 
-      <div class="wrapper wrapper--one-column">
-        <img src="{{ space.logo }}" class="logo" alt="Logo">
-        {{ yield }}
+        {% if space.layout == 'one-column' %}
+
+          <div class="wrapper wrapper--one-column">
+            <img src="{{ space.logo }}" class="logo" alt="Logo">
+            {{ yield }}
+          </div>
+
+        {% elsif space.layout == 'two-column' %}
+
+          <div class="wrapper wrapper--two-column">
+            <div class="wrapper__content">
+              <img src="{{ space.logo }}" class="logo" alt="Logo">
+              {{ yield }}
+            </div>
+            <div class="wrapper__product">
+              logo or something
+            </div>
+          </div>
+
+        {% endif %}
+
       </div>
-
-    {% elsif space.layout == 'two-column' %}
-
-      <div class="wrapper wrapper--two-column">
-        <div class="wrapper__content">
-          <img src="{{ space.logo }}" class="logo" alt="Logo">
-          {{ yield }}
-        </div>
-        <div class="wrapper__product">
-          logo or something
-        </div>
-      </div>
-
-    {% endif %}
+    </div>
 
 
     <script src="{{ 'main.js' | javascript_url }}"></script>
