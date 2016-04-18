@@ -50,10 +50,11 @@
     {% elsif space.layout == 'two-column' %}
 
       <div class="wrapper wrapper--two-column">
-        <div>
+        <div class="wrapper__content">
+          <img src="{{ space.logo }}" class="logo" alt="Logo">
           {{ yield }}
         </div>
-        <div>
+        <div class="wrapper__product">
           logo or something
         </div>
       </div>
