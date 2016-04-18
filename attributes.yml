@@ -99,12 +99,12 @@ custom_attribute_collections:
         value: "one-column"
         help_text: Set the layout of your theme
       logo:
-        value: //rusic-landing-theme.s3.amazonaws.com/logo.svg
+        value: ""
         type: file
         help_text: Upload your logo
       background_color:
         type: color
-        value: ""
+        value: "#f5f5f5"
         help_text: Select a background color
       background_image:
         type: file
@@ -112,7 +112,7 @@ custom_attribute_collections:
         help_text: Upload an image to fill the background
       text_color:
         type: color
-        value: ""
+        value: "#454545"
         help_text: Select a color for the text
       button_color:
         type: color
