@@ -27,6 +27,9 @@ custom_attribute_collections:
     help_title: Social
     help_body: Social settings
     attributes:
+      share_description:
+        value: ""
+        help_text: Text displayed when sharing to social sites
       share_image:
         type: file
         value: ""
@@ -34,6 +37,9 @@ custom_attribute_collections:
       twitter_url:
         value: ""
         help_text: URL to your Twitter profile
+      twitter_username:
+        value: ""
+        help_text: User name without @, e.g. simpleweb
       facebook_url:
         value: ""
         help_text: URL to your Facebook profile
