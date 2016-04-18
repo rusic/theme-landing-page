@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>{{ space.title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ space.summary }}">
     <link rel="shortcut icon" href="{{ space.favicon }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,600italic,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700">
+
     <link rel="stylesheet" href="{{ 'style.css' | stylesheet_url }}">
     <link rel="stylesheet" href="{{ 'share.css' | stylesheet_url }}">
     <style>
@@ -36,6 +39,7 @@
       a { color: {{ space.link_color }}; }
       .button { color: {{ space.button_text_color }}; }
     </style>
+
     {{ space.google_analytics }}
   </head>
   <body>
@@ -58,7 +62,7 @@
               {{ yield }}
             </div>
             <div class="wrapper__product">
-              logo or something
+              <img src="{{ space.product_image }}" alt="">
             </div>
           </div>
 

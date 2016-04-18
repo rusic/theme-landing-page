@@ -63,13 +63,13 @@ custom_attribute_collections:
         value: "Our website is coming soon"
         help_text: The heading after signing up
       sub_heading:
-        value: "praesent ornare elit leo, non bibendum metus"
+        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
         help_text: The subheading on the initial page
       post_sub_heading:
-        value: "praesent ornare elit leo, non bibendum metus"
+        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
         help_text: The subheading after signing up
       signup_message:
-        value: "Keep up to date by signing up with your email"
+        value: "Sign up for updates"
         help_text: A message to prompt users to sign up
       thank_you_message:
         value: "Thank you for signing up!"
@@ -79,6 +79,16 @@ custom_attribute_collections:
         help_text: "The text shown when sharing"
       share_message:
         value: "Share this link to get access earlier"
+
+  content:
+    title: Content
+    help_title: Content
+    help_body: Content used throughout the site
+    attributes:
+      product_image:
+        type: file
+        value: ""
+        help_text: Your product image, screenshot of your app on an iPhone
 
   styling:
     title: Styling
