@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ space.summary }}">
     <link rel="shortcut icon" href="{{ space.favicon }}">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700">
 
     <link rel="stylesheet" href="{{ 'style.css' | stylesheet_url }}">
     <link rel="stylesheet" href="{{ 'share.css' | stylesheet_url }}">
@@ -36,8 +36,17 @@
       {% if space.wrapper_background != empty %}
         .wrapper { background: {{ space.wrapper_background }}; }
       {% endif %}
+
       a { color: {{ space.link_color }}; }
-      .button { color: {{ space.button_text_color }}; }
+
+      .button {
+        background-color: {{ space.button_color }};
+        color: {{ space.button_text_color }};
+      }
+
+      .button:hover {
+        background-color: {{ space.button_hover_color }};
+      }
     </style>
 
     {{ space.google_analytics }}

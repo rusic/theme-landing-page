@@ -114,6 +114,14 @@ custom_attribute_collections:
         type: color
         value: ""
         help_text: Select a color for the text
+      button_color:
+        type: color
+        value: "#FF6768"
+        help_text: Select a color for the buttons
+      button_hover_color:
+        type: color
+        value: "#E21011"
+        help_text: Select a color for the buttons hover
       button_text_color:
         type: color
         value: "#ffffff"
