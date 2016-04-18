@@ -85,6 +85,9 @@ custom_attribute_collections:
     help_title: Styling
     help_body: Customise the design of your landing page.
     attributes:
+      layout:
+        value: "one-column"
+        help_text: Set the layout of your theme
       logo:
         value: //rusic-landing-theme.s3.amazonaws.com/logo.svg
         type: file

@@ -40,10 +40,26 @@
   </head>
   <body>
 
-    <div class="wrapper">
-      <img src="{{ space.logo }}" class="logo" alt="Logo">
-      {{ yield }}
-    </div>
+    {% if space.layout == 'one-column' %}
+
+      <div class="wrapper wrapper--one-column">
+        <img src="{{ space.logo }}" class="logo" alt="Logo">
+        {{ yield }}
+      </div>
+
+    {% elsif space.layout == 'two-column' %}
+
+      <div class="wrapper wrapper--two-column">
+        <div>
+          {{ yield }}
+        </div>
+        <div>
+          logo or something
+        </div>
+      </div>
+
+    {% endif %}
+
 
     <script src="{{ 'main.js' | javascript_url }}"></script>
   </body>
