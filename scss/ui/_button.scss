@@ -1,11 +1,14 @@
 .button {
   -webkit-appearance: none;
-  background-color: $color-dark;
+  background-color: #FF6768;
   font-family: inherit;
-  font-size: inherit;
   -webkit-font-smoothing: antialiased;
   border: none;
   color: inherit;
   text-decoration: none;
   border-radius: 3px;
+
+  &:hover {
+    background-color: #E21011;
+  }
 }

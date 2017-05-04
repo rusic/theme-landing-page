@@ -9,7 +9,16 @@ $bp: 600px;
 
   &__cell {
     @include above($bp) {
+      padding-left: 5px;
       display: table-cell;
+    }
+
+    &:first-child {
+
+      @include above($bp) {
+        padding-left: 0;
+        padding-right: 5px;
+      }
     }
   }
 }

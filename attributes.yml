@@ -1,71 +1,142 @@
-google_analytics:
-  value: ""
-  help_text: "Insert your full Google Analytics code"
-logo:
-  value: "//rusic-landing-theme.s3.amazonaws.com/logo.svg"
-  help_text: "Full link to your logo"
-favicon:
-  value: "//rusic.com/favicon.ico"
-  help_text: "URL to your favicon"
-heading:
-  value: "Our website is coming soon"
-  help_text: "The heading on the initial page"
-post_heading:
-  value: "Our website is coming soon"
-  help_text: "The heading after signing up"
-sub_heading:
-  value: "praesent ornare elit leo, non bibendum metus"
-  help_text: "The subheading on the initial page"
-post_sub_heading:
-  value: "praesent ornare elit leo, non bibendum metus"
-  help_text: "The subheading after signing up"
-signup_message:
-  value: "Keep up to date by signing up with your email"
-  help_text: "A message to prompt users to sign up"
-thank_you_message:
-  value: "Thank you for signing up!"
-  help_text: "A message to display after they sign up"
-background_color:
-  value: ""
-  help_text: "Specfiy a hex colour for your background e.g. #757F9A"
-background_image:
-  value: ""
-  help_text: "Specify a background image, e.g. url(foo.jpg) or linear-gradient(90deg, #FFF 0%, #000 100%)"
-wrapper_background:
-  value: ""
-  help_text: "Specify a background image, e.g. rgba(0, 0, 0, .9)"
-text_color:
-  value: ""
-  help_text: "Specify a hex colour for your text e.g. #111"
-button_text_color:
-  value: "#fff"
-  help_text: "Specify a hex colour for your button text e.g. #111"
-social_messaging:
-  value: ""
-  help_text: "The text shown when sharing"
-referrals_enabled:
-  value: "true"
-  help_text: "Are the referrals enabled? Should be either true or false"
-share_message:
-  value: "Share this link to get access earlier"
-link_color:
-  value: "#2980b9"
-  help_text: "Specify a hex colour for your text for links e.g. #111"
-share_image:
-  value: ""
-  help_text: "Specify an image for using when sharing to social networks"
-twitter_url:
-  value: ""
-  help_text: "URL to your Twitter profile"
-facebook_url:
-  value: ""
-  help_text: "URL to your Facebook profile"
-linkedin_url:
-  value: ""
-  help_text: "URL to your LinkedIn profile"
-collect_name:
-  value: ""
-  help_text: "Set to 'true' if you'd like to collect names"
-collect_postcode:
-  value: ""
-  help_text: "Set to 'true' if you'd like to collect postcodes"
+custom_attribute_collections:
+
+  settings:
+    title: Settings
+    help_title: Settings
+    help_body: General settings
+    attributes:
+      collect_name:
+        type: boolean
+        value: "0"
+        help_text: Set to 'true' if you'd like to collect names
+      collect_postcode:
+        type: boolean
+        value: "0"
+        help_text: Set to 'true' if you'd like to collect postcodes
+      favicon:
+        type: file
+        value: "//rusic.com/favicon.ico"
+        help_text: Upload your favicon
+      google_analytics:
+        type: textarea
+        value: ""
+        help_text: "Insert your full Google Analytics code"
+
+  social:
+    title: Social
+    help_title: Social
+    help_body: Social settings
+    attributes:
+      share_description:
+        value: ""
+        help_text: Text displayed when sharing to social sites
+      share_image:
+        type: file
+        value: ""
+        help_text: Specify an image for using when sharing to social networks
+      twitter_url:
+        value: ""
+        help_text: URL to your Twitter profile
+      twitter_username:
+        value: ""
+        help_text: User name without @, e.g. simpleweb
+      facebook_url:
+        value: ""
+        help_text: URL to your Facebook profile
+      linkedin_url:
+        value: ""
+        help_text: URL to your LinkedIn profile
+
+  referrals:
+    title: Referrals
+    help_title: Referrals
+    help_body: Referral settings
+    attributes:
+      referrals_enabled:
+        type: boolean
+        value: "1"
+        help_text: Enable referrals
+
+  messaging:
+    title: Messaging
+    help_title: Messaging
+    help_body: Customise the messaging and text used throughout the landing page.
+    attributes:
+      heading:
+        value: "Our website is coming soon"
+        help_text: The heading on the initial page
+      post_heading:
+        value: "Our website is coming soon"
+        help_text: The heading after signing up
+      sub_heading:
+        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
+        help_text: The subheading on the initial page
+      post_sub_heading:
+        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
+        help_text: The subheading after signing up
+      signup_message:
+        value: "Sign up for updates"
+        help_text: A message to prompt users to sign up
+      thank_you_message:
+        value: "Thank you for signing up!"
+        help_text: A message to display after they sign up
+      social_messaging:
+        value: ""
+        help_text: "The text shown when sharing"
+      share_message:
+        value: "Share this link to get access earlier"
+
+  content:
+    title: Content
+    help_title: Content
+    help_body: Content used throughout the site
+    attributes:
+      product_image:
+        type: file
+        value: ""
+        help_text: Your product image, screenshot of your app on an iPhone
+
+  styling:
+    title: Styling
+    help_title: Styling
+    help_body: Customise the design of your landing page.
+    attributes:
+      layout:
+        value: "one-column"
+        help_text: Set the layout of your theme
+      logo:
+        value: ""
+        type: file
+        help_text: Upload your logo
+      background_color:
+        type: color
+        value: "#f5f5f5"
+        help_text: Select a background color
+      background_image:
+        type: file
+        value: ""
+        help_text: Upload an image to fill the background
+      text_color:
+        type: color
+        value: "#454545"
+        help_text: Select a color for the text
+      button_color:
+        type: color
+        value: "#FF6768"
+        help_text: Select a color for the buttons
+      button_hover_color:
+        type: color
+        value: "#E21011"
+        help_text: Select a color for the buttons hover
+      button_text_color:
+        type: color
+        value: "#ffffff"
+        help_text: Select a color for the button text
+      wrapper_background:
+        type: color
+        value: ""
+        help_text: Select a color for the wrapper background
+      link_color:
+        type: color
+        value: "#2980b9"
+        help_text: Select a color for the links

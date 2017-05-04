@@ -1,14 +1,14 @@
-<h1>{{ space.heading | markdown }}</h1>
-<h2>{{ space.sub_heading }}</h2>
+<h1>{{ space.heading }}</h1>
+<p>{{ space.sub_heading }}</p>
 
-<h3>{{ space.signup_message }}</h3>
+<h2>{{ space.signup_message }}</h2>
 
 <form action="{{ space.permalink }}/ideas" method="post" class="form">
   <input type="hidden" name="idea[title]" value="BLANK">
   <input type="hidden" name="idea[content]" value="BLANK">
 
   <div class="form-group">
-    {% if space.collect_name == 'true' %}
+    {% if space.collect_name == '1' %}
     <div class="form-field form-group__cell">
       <input
         type="text"
@@ -17,7 +17,7 @@
         placeholder="Your name">
     </div>
     {% endif %}
-    {% if space.collect_postcode == 'true' %}
+    {% if space.collect_postcode == '1' %}
     <div class="form-field form-group__cell">
       <input
         type="text"
@@ -36,7 +36,7 @@
       required>
   </div>
 
-  <button type="submit" class="button">Submit</button>
+  <button type="submit" class="button">Sign up</button>
 </form>
 
 <ul class="inline-list">
@@ -54,4 +54,3 @@
     </a>
   </li>{% endif %}
 </ul>
-

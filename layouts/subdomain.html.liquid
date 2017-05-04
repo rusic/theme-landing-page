@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>{{ space.title }}</title>
-    <meta name="description" content="{{ space.summary }}">
-    <link rel="shortcut icon" href="{{ space.favicon }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,600italic,700">
+    <meta name="description" content="{{ space.summary }}">
+
+    {% include 'share-meta' %}
+
+    <link rel="shortcut icon" href="{{ space.favicon }}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Hind:400,700">
+
     <link rel="stylesheet" href="{{ 'style.css' | stylesheet_url }}">
     <link rel="stylesheet" href="{{ 'share.css' | stylesheet_url }}">
     <style>
@@ -16,7 +22,7 @@
       {% endif %}
 
       {% if space.background_image != empty %}
-        body { background-image: {{ space.background_image }}; }
+        body { background-image: url({{ space.background_image }}); }
       {% endif %}
 
       {% if space.background_color == "" %}
@@ -33,23 +39,50 @@
       {% if space.wrapper_background != empty %}
         .wrapper { background: {{ space.wrapper_background }}; }
       {% endif %}
-      .button { color: {{ space.button_text_color }}; }
-      p a { color: {{ space.link_color }}; }
+
+      a { color: {{ space.link_color }}; }
+
+      .button {
+        background-color: {{ space.button_color }};
+        color: {{ space.button_text_color }};
+      }
+
+      .button:hover {
+        background-color: {{ space.button_hover_color }};
+      }
     </style>
+
     {{ space.google_analytics }}
   </head>
   <body>
 
-    {% if space.guest_ideas %}
-      <div class="wrapper">
-        <img src="{{ space.logo }}" alt="Logo">
-        {{ yield }}
+    <div class="center">
+      <div class="center__reset">
+
+        {% if space.layout == 'one-column' %}
+
+          <div class="wrapper wrapper--one-column">
+            <img src="{{ space.logo }}" class="logo" alt="Logo">
+            {{ yield }}
+          </div>
+
+        {% elsif space.layout == 'two-column' %}
+
+          <div class="wrapper wrapper--two-column">
+            <div class="wrapper__content">
+              <img src="{{ space.logo }}" class="logo" alt="Logo">
+              {{ yield }}
+            </div>
+            <div class="wrapper__product">
+              <img src="{{ space.product_image }}" alt="">
+            </div>
+          </div>
+
+        {% endif %}
+
       </div>
-    {% else %}
-      <div class="wrapper">
-        <h1>This site requires <a href="http://rusic.readme.io/v1/docs/guest-ideas">guest ideas</a> to be enabled.</h1>
-      </div>
-    {% endif %}
+    </div>
+
 
     <script src="{{ 'main.js' | javascript_url }}"></script>
   </body>
