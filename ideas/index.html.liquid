@@ -39,18 +39,4 @@
   <button type="submit" class="button">Sign up</button>
 </form>
 
-<ul class="inline-list">
-  {% if space.twitter_url != empty %}<li class="inline-list__item">
-    <a href="{{ space.twitter_url }}" target="_blank">
-      <img src="{{ 'twitter-icon-2x.png' | image_url }}" width="32" alt="Twitter icon">
-    </a>
-  </li>{% endif %}{% if space.facebook_url != empty %}<li class="inline-list__item">
-    <a href="{{ space.facebook_url }}" target="_blank">
-      <img src="{{ 'facebook-icon-2x.png' | image_url }}" width="32" alt="Facebook icon">
-    </a>
-  </li>{% endif %}{% if space.linkedin_url != empty %}<li class="inline-list__item">
-    <a href="{{ space.linkedin_url }}" target="_blank">
-      <img src="{{ 'linkedin-icon-2x.png' | image_url }}" width="32" alt="LinkedIn icon">
-    </a>
-  </li>{% endif %}
-</ul>
+{% include 'networks' %}
