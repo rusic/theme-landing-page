@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'rusic', '>=2.0'
+gem 'rusic', '~> 2.0'
