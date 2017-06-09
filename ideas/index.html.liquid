@@ -1,34 +1,39 @@
-<h1>{{ space.heading }}</h1>
-<p>{{ space.sub_heading }}</p>
-
-<h2>{{ space.signup_message }}</h2>
+<header class="page-header">
+  {% include 'logo' %}
+  <h1>{{ space.heading }}</h1>
+  <p>{{ space.sub_heading }}</p>
+  <h2>{{ space.signup_message }}</h2>
+</header>
 
 <form action="{{ space.permalink }}/ideas" method="post" class="form">
   <input type="hidden" name="idea[title]" value="BLANK">
   <input type="hidden" name="idea[content]" value="BLANK">
 
-  <div class="form-group">
+  <div class="form__group">
     {% if space.collect_name == '1' %}
-    <div class="form-field form-group__cell">
-      <input
-        type="text"
-        class="input"
-        name="idea[custom][name]"
-        placeholder="Your name">
-    </div>
+      <div class="form__field">
+        <input
+          type="text"
+          class="input"
+          name="idea[custom][name]"
+          placeholder="Your name"
+        >
+      </div>
     {% endif %}
+
     {% if space.collect_postcode == '1' %}
-    <div class="form-field form-group__cell">
-      <input
-        type="text"
-        class="input"
-        name="idea[custom][postcode]"
-        placeholder="Your postcode">
-    </div>
+      <div class="form__field">
+        <input
+          type="text"
+          class="input"
+          name="idea[custom][postcode]"
+          placeholder="Your postcode"
+        >
+      </div>
     {% endif %}
   </div>
 
-  <div class="form-field">
+  <div class="form__field">
     <input
       type="email"
       class="input"
@@ -38,7 +43,13 @@
     >
   </div>
 
-  <button type="submit" class="button">Sign up</button>
+  <div class="form__field">
+    <button type="submit" class="button button--submit">
+      Sign up
+    </button>
+  </div>
 </form>
 
-{% include 'networks' %}
+<footer class="page-footer">
+  {% include 'networks' %}
+</footer>

@@ -50,30 +50,9 @@
   <body>
 
     <div class="center">
-      <div class="center__reset">
-
-        {% if space.layout == 'one-column' %}
-
-          <div class="wrapper wrapper--one-column">
-            {% include 'logo' %}
-            {{ yield }}
-          </div>
-
-        {% elsif space.layout == 'two-column' %}
-
-          <div class="wrapper wrapper--two-column">
-            <div class="wrapper__content">
-              <img src="{{ space.logo }}" class="logo" alt="Logo">
-              {{ yield }}
-            </div>
-            <div class="wrapper__product">
-              <img src="{{ space.product_image }}" alt="">
-            </div>
-          </div>
-
-        {% endif %}
-
-      </div>
+      <main class="wrapper">
+        {{ yield }}
+      </main>
     </div>
 
     {% include "icons" %}
