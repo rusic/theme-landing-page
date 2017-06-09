@@ -1,8 +1,8 @@
 {% if space.twitter_url != empty || space.facebook_url != empty || space.linkedin_url != empty %}
 
-  <ul class="inline-list">
+  <ul class="network-list">
     {% if space.twitter_url != empty %}
-      <li class="inline-list__item">
+      <li class="network-list__item">
         <a href="{{ space.twitter_url }}" target="_blank" class="icon">
           <svg viewBox="0 0 32 32">
             <use class="icon__icon" xlink:href="#twitter-icon"></use>
@@ -13,7 +13,7 @@
     {% endif %}
 
     {% if space.facebook_url != empty %}
-      <li class="inline-list__item">
+      <li class="network-list__item">
         <a href="{{ space.facebook_url }}" target="_blank" class="icon">
           <svg viewBox="0 0 32 32">
             <use class="icon__icon" xlink:href="#facebook-icon"></use>
@@ -24,7 +24,7 @@
     {% endif %}
 
     {% if space.linkedin_url != empty %}
-      <li class="inline-list__item">
+      <li class="network-list__item">
         <a href="{{ space.linkedin_url }}" target="_blank" class="icon">
           <svg viewBox="0 0 32 32">
             <use class="icon__icon" xlink:href="#linkedin-icon"></use>
