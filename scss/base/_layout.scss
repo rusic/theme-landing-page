@@ -3,8 +3,7 @@
   max-width: $site-max-width;
   margin: 0 auto;
   position: relative;
-  padding: 30px 10px;
-  box-sizing: content-box;
+  padding: 30px 16px;
 
   &--one-column {
     text-align: center;
@@ -34,8 +33,4 @@
       width: 50%;
     }
   }
-}
-
-.logo {
-  max-width: 100%;
 }

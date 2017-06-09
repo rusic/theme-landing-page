@@ -25,14 +25,6 @@
         body { background-image: url({{ space.background_image }}); }
       {% endif %}
 
-      {% if space.background_color == "" %}
-        {% if space.background_image == "" %}
-          body {
-            background-image: linear-gradient(90deg,#757F9A 0,#D7DDE8 100%);
-          }
-        {% endif %}
-      {% endif %}
-
       {% if space.text_color != empty %}
         body { color: {{ space.text_color }};  }
       {% endif %}
@@ -62,7 +54,7 @@
         {% if space.layout == 'one-column' %}
 
           <div class="wrapper wrapper--one-column">
-            <img src="{{ space.logo }}" class="logo" alt="Logo">
+            {% include 'logo' %}
             {{ yield }}
           </div>
 

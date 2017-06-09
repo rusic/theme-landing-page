@@ -1,13 +1,10 @@
 .center {
-
-  @include above(600px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
   &__reset {
-    width: 100%;
+    flex: 1;
   }
 }

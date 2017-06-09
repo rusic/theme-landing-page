@@ -110,7 +110,7 @@ custom_attribute_collections:
         help_text: Upload your logo
       background_color:
         type: color
-        value: "#f5f5f5"
+        value: ""
         help_text: Select a background color
       background_image:
         type: file
@@ -118,7 +118,7 @@ custom_attribute_collections:
         help_text: Upload an image to fill the background
       text_color:
         type: color
-        value: "#454545"
+        value: ""
         help_text: Select a color for the text
       button_color:
         type: color
