@@ -34,14 +34,15 @@
 
       a { color: {{ space.link_color }}; }
 
-      .button {
-        background-color: {{ space.button_color }};
-        color: {{ space.button_text_color }};
-      }
-
-      .button:hover {
-        background-color: {{ space.button_hover_color }};
-      }
+      {% if space.button_color != empty %}
+        .button { background-color: {{ space.button_color }}; }
+      {% endif %}
+      {% if space.button_text_color != empty %}
+        .button { color: {{ space.button_text_color }}; }
+      {% endif %}
+      {% if space.button_hover_color != empty %}
+        .button:hover { background-color: {{ space.button_hover_color }}; }
+      {% endif %}
     </style>
 
     {{ space.google_analytics }}

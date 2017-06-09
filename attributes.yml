@@ -122,15 +122,15 @@ custom_attribute_collections:
         help_text: Select a color for the text
       button_color:
         type: color
-        value: "#FF6768"
+        value: ""
         help_text: Select a color for the buttons
       button_hover_color:
         type: color
-        value: "#E21011"
+        value: ""
         help_text: Select a color for the buttons hover
       button_text_color:
         type: color
-        value: "#ffffff"
+        value: ""
         help_text: Select a color for the button text
       wrapper_background:
         type: color
@@ -138,5 +138,5 @@ custom_attribute_collections:
         help_text: Select a color for the wrapper background
       link_color:
         type: color
-        value: "#2980b9"
+        value: ""
         help_text: Select a color for the links
