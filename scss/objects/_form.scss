@@ -3,4 +3,9 @@
   max-width: 460px;
   margin: 0 auto;
   padding: 0 0 20px;
+
+  &__label {
+    font-weight: 700;
+    font-size: 1em;
+  }
 }
