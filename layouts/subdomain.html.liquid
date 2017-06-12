@@ -16,35 +16,8 @@
 
     <link rel="stylesheet" href="{{ 'style.css' | stylesheet_url }}">
     <link rel="stylesheet" href="{{ 'share.css' | stylesheet_url }}">
-    <style>
-      {% if space.background_color != empty %}
-        body { background-color: {{ space.background_color }}; }
-      {% endif %}
 
-      {% if space.background_image != empty %}
-        body { background-image: url({{ space.background_image }}); }
-      {% endif %}
-
-      {% if space.text_color != empty %}
-        body { color: {{ space.text_color }};  }
-      {% endif %}
-      {% if space.wrapper_background != empty %}
-        .wrapper { background: {{ space.wrapper_background }}; }
-      {% endif %}
-
-      a { color: {{ space.link_color }}; }
-
-      {% if space.button_color != empty %}
-        .button { background-color: {{ space.button_color }}; }
-      {% endif %}
-      {% if space.button_text_color != empty %}
-        .button { color: {{ space.button_text_color }}; }
-      {% endif %}
-      {% if space.button_hover_color != empty %}
-        .button:hover { background-color: {{ space.button_hover_color }}; }
-      {% endif %}
-    </style>
-
+    {% include "style-override" %}
     {{ space.google_analytics }}
   </head>
   <body>
