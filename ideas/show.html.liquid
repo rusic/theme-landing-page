@@ -2,12 +2,12 @@
   {% include 'logo' %}
   <h1>{{ space.post_heading }}</h1>
   <p>{{ space.sub_heading }}</p>
+  <h2>{{ space.thank_you_message }}</h2>
 </header>
 
 {% if space.referrals_enabled == "1" %}
 
   <div class="share">
-    <h2>{{ space.thank_you_message }}</h2>
     <p>{{ space.share_message }}</p>
 
     <div class="form form--full">
