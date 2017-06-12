@@ -71,9 +71,6 @@ custom_attribute_collections:
       sub_heading:
         value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
         help_text: The subheading on the initial page
-      post_sub_heading:
-        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
-        help_text: The subheading after signing up
       signup_message:
         value: "Sign up for updates"
         help_text: A message to prompt users to sign up
