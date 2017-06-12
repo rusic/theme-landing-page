@@ -2,9 +2,29 @@
   max-width: 380px;
   margin: 0 auto;
 
+  &--full {
+    max-width: none;
+  }
+
   &__field {
     margin: 0 8px 16px;
     flex: 1;
+
+    &--action {
+
+      > *:last-child {
+        margin-top: 16px;
+      }
+
+      @include above(420px) {
+        display: flex;
+
+        > *:last-child {
+          margin-top: 0;
+          margin-left: 16px;
+        }
+      }
+    }
   }
 
   &__group {

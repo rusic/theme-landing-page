@@ -9,8 +9,24 @@
   <div class="share">
     <h2>{{ space.thank_you_message }}</h2>
     <p>{{ space.share_message }}</p>
-    <div class="form-field">
-      <input type="text" readonly class="input" value="http://{{ host }}{{ idea.referral_link }}">
+
+    <div class="form form--full">
+      <div class="form__field form__field--action">
+        <input
+          type="text"
+          value="http://{{ host }}{{ idea.referral_link }}"
+          class="input"
+          id="referral-link"
+        >
+        <div>
+          <button
+            class="button button--copy"
+            data-clipboard-target="#referral-link"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
