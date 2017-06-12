@@ -2,6 +2,8 @@
 
 A landing theme for Rusic that provides email signup with a referral mechanic.
 
+![](screenshot.png)
+
 ## Setup
 
 Copy `.rusic.yml.example` to `.rusic.yml` and configure it for the environments
