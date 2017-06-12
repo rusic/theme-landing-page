@@ -17,10 +17,6 @@ custom_attribute_collections:
         type: file
         value: "//rusic.com/favicon.ico"
         help_text: Upload your favicon
-      google_analytics:
-        type: textarea
-        value: ""
-        help_text: "Insert your full Google Analytics code"
 
   social:
     title: Social
