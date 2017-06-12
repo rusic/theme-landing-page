@@ -8,11 +8,11 @@ custom_attribute_collections:
       collect_name:
         type: boolean
         value: "0"
-        help_text: Set to 'true' if you'd like to collect names
+        help_text: Optionally collect the user’s name when signing up
       collect_postcode:
         type: boolean
         value: "0"
-        help_text: Set to 'true' if you'd like to collect postcodes
+        help_text: Optionally collect the user’s postcode when signing up
       favicon:
         type: file
         value: "//rusic.com/favicon.ico"
@@ -61,9 +61,6 @@ custom_attribute_collections:
       heading:
         value: "Our website is coming soon"
         help_text: The heading on the initial page
-      post_heading:
-        value: "Our website is coming soon"
-        help_text: The heading after signing up
       sub_heading:
         value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
         help_text: The subheading on the initial page
@@ -96,6 +93,10 @@ custom_attribute_collections:
     attributes:
       layout:
         value: "one-column"
+        type: select
+        select_options:
+          - "one-column"
+          - "two-column"
         help_text: Set the layout of your theme
       logo:
         value: ""
