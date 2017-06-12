@@ -1,5 +1,9 @@
 .wrapper {
   max-width: $site-max-width;
-  margin: 0 auto;
-  padding: 32px 16px;
+  margin: 32px auto;
+  padding: 16px;
+
+  @include above(420px) {
+    padding: 32px;
+  }
 }
