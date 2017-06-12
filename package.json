@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "sass": "node-sass -o assets scss",
+    "sass": "node-sass -o assets scss --output-style compressed",
     "watch": "onchange 'scss/**/*.scss' -- yarn run sass"
   },
   "devDependencies": {
