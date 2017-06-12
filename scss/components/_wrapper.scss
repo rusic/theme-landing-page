@@ -6,4 +6,32 @@
   @include above(420px) {
     padding: 32px;
   }
+
+  &--two-column {
+
+    @include above($two-column-break) {
+      max-width: 740px;
+      display: flex;
+      flex-direction: row-reverse;
+
+      .page-header,
+      .page-footer,
+      .share
+      {
+        text-align: left;
+      }
+    }
+  }
+
+  &__image {
+    margin-top: 32px;
+
+    @include above($two-column-break) {
+      margin-top: 0;
+    }
+
+    .wrapper--one-column & {
+      display: none;
+    }
+  }
 }

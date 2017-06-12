@@ -1,55 +1,63 @@
-<header class="page-header">
-  {% include 'logo' %}
-  <h1>{{ space.heading }}</h1>
-  <p>{{ space.sub_heading }}</p>
-  <h2>{{ space.signup_message }}</h2>
-</header>
+<div class="wrapper__content">
+  <header class="page-header">
+    {% include 'logo' %}
+    <h1>{{ space.heading }}</h1>
+    <p>{{ space.sub_heading }}</p>
+    <h2>{{ space.signup_message }}</h2>
+  </header>
 
-<form action="{{ space.permalink }}/ideas" method="post" class="form">
-  <input type="hidden" name="idea[title]" value="BLANK">
-  <input type="hidden" name="idea[content]" value="BLANK">
+  <form action="{{ space.permalink }}/ideas" method="post" class="form">
+    <input type="hidden" name="idea[title]" value="BLANK">
+    <input type="hidden" name="idea[content]" value="BLANK">
 
-  <div class="form__group">
-    {% if space.collect_name == '1' %}
-      <div class="form__field">
-        <input
-          type="text"
-          class="input"
-          name="idea[custom][name]"
-          placeholder="Your name"
-        >
-      </div>
-    {% endif %}
+    <div class="form__group">
+      {% if space.collect_name == '1' %}
+        <div class="form__field">
+          <input
+            type="text"
+            class="input"
+            name="idea[custom][name]"
+            placeholder="Your name"
+          >
+        </div>
+      {% endif %}
 
-    {% if space.collect_postcode == '1' %}
-      <div class="form__field">
-        <input
-          type="text"
-          class="input"
-          name="idea[custom][postcode]"
-          placeholder="Your postcode"
-        >
-      </div>
-    {% endif %}
+      {% if space.collect_postcode == '1' %}
+        <div class="form__field">
+          <input
+            type="text"
+            class="input"
+            name="idea[custom][postcode]"
+            placeholder="Your postcode"
+          >
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="form__field">
+      <input
+        type="email"
+        class="input"
+        name="identity[email]"
+        placeholder="Enter your email"
+        required
+      >
+    </div>
+
+    <div class="form__field">
+      <button type="submit" class="button button--submit">
+        Sign up
+      </button>
+    </div>
+  </form>
+
+  <footer class="page-footer">
+    {% include 'networks' %}
+  </footer>
+</div>
+
+{% if space.product_image != empty and space.layout == "two-column" %}
+  <div class="wrapper__image">
+    <img src="{{ space.product_image }}"/>
   </div>
-
-  <div class="form__field">
-    <input
-      type="email"
-      class="input"
-      name="identity[email]"
-      placeholder="Enter your email"
-      required
-    >
-  </div>
-
-  <div class="form__field">
-    <button type="submit" class="button button--submit">
-      Sign up
-    </button>
-  </div>
-</form>
-
-<footer class="page-footer">
-  {% include 'networks' %}
-</footer>
+{% endif %}

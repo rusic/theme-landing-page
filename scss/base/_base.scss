@@ -6,3 +6,7 @@ body {
   color: $text-color;
   background-image: url("{{ 'background.jpg' | asset_url }}");
 }
+
+img {
+  max-width: 100%;
+}

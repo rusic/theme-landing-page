@@ -1,37 +1,45 @@
-<header class="page-header">
-  {% include 'logo' %}
-  <h1>{{ space.heading }}</h1>
-  <p>{{ space.sub_heading }}</p>
-  <h2>{{ space.thank_you_message }}</h2>
-</header>
+<div class="wrapper__content">
+  <header class="page-header">
+    {% include 'logo' %}
+    <h1>{{ space.heading }}</h1>
+    <p>{{ space.sub_heading }}</p>
+    <h2>{{ space.thank_you_message }}</h2>
+  </header>
 
-{% if space.referrals_enabled == "1" %}
+  {% if space.referrals_enabled == "1" %}
 
-  <div class="share">
-    <p>{{ space.share_message }}</p>
+    <div class="share">
+      <p>{{ space.share_message }}</p>
 
-    <div class="form form--full">
-      <div class="form__field form__field--action">
-        <input
-          type="text"
-          value="http://{{ host }}{{ idea.referral_link }}"
-          class="input"
-          id="referral-link"
-        >
-        <div>
-          <button
-            class="button button--copy"
-            data-clipboard-target="#referral-link"
+      <div class="form form--full">
+        <div class="form__field form__field--action">
+          <input
+            type="text"
+            value="http://{{ host }}{{ idea.referral_link }}"
+            class="input"
+            id="referral-link"
           >
-            Copy
-          </button>
+          <div>
+            <button
+              class="button button--copy"
+              data-clipboard-target="#referral-link"
+            >
+              Copy
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+  {% endif %}
+
+  <footer class="page-footer">
+    {% include 'networks' %}
+  </footer>
+</div>
+
+{% if space.product_image != empty and space.layout == "two-column" %}
+  <div class="wrapper__image">
+    <img src="{{ space.product_image }}"/>
   </div>
-
 {% endif %}
-
-<footer class="page-footer">
-  {% include 'networks' %}
-</footer>
