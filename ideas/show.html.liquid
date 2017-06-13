@@ -1,37 +1,41 @@
 <div class="wrapper__content">
   <header class="page-header">
     {% include 'logo' %}
-    <h1>{{ space.heading }}</h1>
-    <p>{{ space.sub_heading }}</p>
-    <h2>{{ space.thank_you_message }}</h2>
+    <h1>{{ space.thank_you_message }}</h1>
+    <h3 class="lead">{{ space.share_message }}</h3>
+
+    {% if idea.referrals == 0 %}
+      <p>No one has signed up with your link yet</p>
+    {% elsif idea.referrals == 1 %}
+      <p>One person has signed up with your link</p>
+    {% else %}
+      <p>
+        {{ idea.referrals }}
+        people have signed up with your link
+      </p>
+    {% endif %}
   </header>
 
-  {% if space.referrals_enabled == "1" %}
-
-    <div class="share">
-      <p>{{ space.share_message }}</p>
-
-      <div class="form form--full">
-        <div class="form__field form__field--action">
-          <input
-            type="text"
-            value="http://{{ host }}{{ idea.referral_link }}"
-            class="input"
-            id="referral-link"
+  <div class="share">
+    <div class="form form--full">
+      <div class="form__field form__field--action">
+        <input
+          type="text"
+          value="http://{{ host }}{{ idea.referral_link }}"
+          class="input"
+          id="referral-link"
+        >
+        <div>
+          <button
+            class="button button--copy"
+            data-clipboard-target="#referral-link"
           >
-          <div>
-            <button
-              class="button button--copy"
-              data-clipboard-target="#referral-link"
-            >
-              Copy
-            </button>
-          </div>
+            Copy
+          </button>
         </div>
       </div>
     </div>
-
-  {% endif %}
+  </div>
 
   <footer class="page-footer">
     {% include 'networks' %}

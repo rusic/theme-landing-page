@@ -43,16 +43,6 @@ custom_attribute_collections:
         value: ""
         help_text: URL to your LinkedIn profile
 
-  referrals:
-    title: Referrals
-    help_title: Referrals
-    help_body: Referral settings
-    attributes:
-      referrals_enabled:
-        type: boolean
-        value: "1"
-        help_text: Enable referrals
-
   messaging:
     title: Messaging
     help_title: Messaging
@@ -74,7 +64,7 @@ custom_attribute_collections:
         value: ""
         help_text: "The text shown when sharing"
       share_message:
-        value: "Share this link to get access earlier"
+        value: "Share this link to get access even quicker when people sign up with your referral link"
 
   content:
     title: Content
