@@ -8,19 +8,15 @@ custom_attribute_collections:
       collect_name:
         type: boolean
         value: "0"
-        help_text: Set to 'true' if you'd like to collect names
+        help_text: Optionally collect the user’s name when signing up
       collect_postcode:
         type: boolean
         value: "0"
-        help_text: Set to 'true' if you'd like to collect postcodes
+        help_text: Optionally collect the user’s postcode when signing up
       favicon:
         type: file
         value: "//rusic.com/favicon.ico"
         help_text: Upload your favicon
-      google_analytics:
-        type: textarea
-        value: ""
-        help_text: "Insert your full Google Analytics code"
 
   social:
     title: Social
@@ -47,16 +43,6 @@ custom_attribute_collections:
         value: ""
         help_text: URL to your LinkedIn profile
 
-  referrals:
-    title: Referrals
-    help_title: Referrals
-    help_body: Referral settings
-    attributes:
-      referrals_enabled:
-        type: boolean
-        value: "1"
-        help_text: Enable referrals
-
   messaging:
     title: Messaging
     help_title: Messaging
@@ -65,15 +51,9 @@ custom_attribute_collections:
       heading:
         value: "Our website is coming soon"
         help_text: The heading on the initial page
-      post_heading:
-        value: "Our website is coming soon"
-        help_text: The heading after signing up
       sub_heading:
         value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
         help_text: The subheading on the initial page
-      post_sub_heading:
-        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
-        help_text: The subheading after signing up
       signup_message:
         value: "Sign up for updates"
         help_text: A message to prompt users to sign up
@@ -84,7 +64,7 @@ custom_attribute_collections:
         value: ""
         help_text: "The text shown when sharing"
       share_message:
-        value: "Share this link to get access earlier"
+        value: "Share this link to get access even quicker when people sign up with your referral link"
 
   content:
     title: Content
@@ -103,6 +83,10 @@ custom_attribute_collections:
     attributes:
       layout:
         value: "one-column"
+        type: select
+        select_options:
+          - "one-column"
+          - "two-column"
         help_text: Set the layout of your theme
       logo:
         value: ""
@@ -110,7 +94,7 @@ custom_attribute_collections:
         help_text: Upload your logo
       background_color:
         type: color
-        value: "#f5f5f5"
+        value: ""
         help_text: Select a background color
       background_image:
         type: file
@@ -118,19 +102,19 @@ custom_attribute_collections:
         help_text: Upload an image to fill the background
       text_color:
         type: color
-        value: "#454545"
+        value: ""
         help_text: Select a color for the text
       button_color:
         type: color
-        value: "#FF6768"
+        value: ""
         help_text: Select a color for the buttons
       button_hover_color:
         type: color
-        value: "#E21011"
+        value: ""
         help_text: Select a color for the buttons hover
       button_text_color:
         type: color
-        value: "#ffffff"
+        value: ""
         help_text: Select a color for the button text
       wrapper_background:
         type: color
@@ -138,5 +122,5 @@ custom_attribute_collections:
         help_text: Select a color for the wrapper background
       link_color:
         type: color
-        value: "#2980b9"
+        value: ""
         help_text: Select a color for the links

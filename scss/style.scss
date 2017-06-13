@@ -12,24 +12,18 @@
 @import "base/reset";
 @import "base/typography";
 @import "base/base";
-@import "base/layout";
 
 /**
- * Objects
+ * Components
  */
-@import "objects/button";
-@import "objects/center";
-@import "objects/form";
-@import "objects/form-field";
-@import "objects/form-group";
-@import "objects/inline-list";
-@import "objects/input";
-@import "objects/share-link";
-
-/**
- * UI
- */
-@import "ui/button";
-@import "ui/form";
-@import "ui/inline-list";
-@import "ui/input";
+@import "components/button";
+@import "components/center";
+@import "components/form";
+@import "components/icon";
+@import "components/network-list";
+@import "components/input";
+@import "components/logo";
+@import "components/page-footer";
+@import "components/page-header";
+@import "components/share";
+@import "components/wrapper";

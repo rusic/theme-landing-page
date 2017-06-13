@@ -1,0 +1,52 @@
+<style>
+
+  {% if space.background_color != empty %}
+    body {
+      background-color: {{ space.background_color }};
+      background-image: none;
+    }
+  {% endif %}
+
+  {% if space.background_image != empty %}
+    body {
+      background-image: url({{ space.background_image }});
+    }
+  {% endif %}
+
+  {% if space.text_color != empty %}
+    body {
+      color: {{ space.text_color }};
+    }
+  {% endif %}
+
+  {% if space.wrapper_background != empty %}
+    .wrapper {
+      background: {{ space.wrapper_background }};
+    }
+  {% endif %}
+
+  {% if space.link_color != empty %}
+    a {
+      color: {{ space.link_color }};
+    }
+  {% endif %}
+
+  {% if space.button_color != empty %}
+    .button {
+      background-color: {{ space.button_color }};
+    }
+  {% endif %}
+
+  {% if space.button_text_color != empty %}
+    .button {
+      color: {{ space.button_text_color }};
+    }
+  {% endif %}
+
+  {% if space.button_hover_color != empty %}
+    .button:hover {
+      background-color: {{ space.button_hover_color }};
+    }
+  {% endif %}
+
+</style>

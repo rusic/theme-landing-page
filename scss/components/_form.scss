@@ -1,0 +1,49 @@
+.form {
+  max-width: 380px;
+  margin: 0 auto;
+
+  &--full {
+    max-width: none;
+  }
+
+  &__field {
+    margin-bottom: 16px;
+    flex: 1;
+
+    &--action {
+
+      > *:last-child {
+        margin-top: 16px;
+      }
+
+      @include above(420px) {
+        display: flex;
+
+        > *:last-child {
+          margin-top: 0;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  &__group {
+
+    @include above(420px) {
+      display: flex;
+
+      .form__field {
+        margin-left: 8px;
+        margin-right: 8px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

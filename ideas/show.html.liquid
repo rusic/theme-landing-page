@@ -1,30 +1,49 @@
-<h1>{{ space.post_heading }}</h1>
-<h2>{{ space.post_sub_heading }}</h2>
+<div class="wrapper__content">
+  <header class="page-header">
+    {% include 'logo' %}
+    <h1>{{ space.thank_you_message }}</h1>
+    <h3 class="lead">{{ space.share_message }}</h3>
 
-<h3>{{ space.thank_you_message }}</h3>
+    {% if idea.referrals == 0 %}
+      <p>No one has signed up with your link yet</p>
+    {% elsif idea.referrals == 1 %}
+      <p>One person has signed up with your link</p>
+    {% else %}
+      <p>
+        {{ idea.referrals }}
+        people have signed up with your link
+      </p>
+    {% endif %}
+  </header>
 
-{% if space.referrals_enabled == "1" %}
-
-  <p>{{ space.share_message }}</p>
-
-  <div class="share-link">
-    <div class="form-field">
-      <input type="text" readonly class="input" value="http://{{ host }}{{ idea.referral_link }}">
+  <div class="share">
+    <div class="form form--full">
+      <div class="form__field form__field--action">
+        <input
+          type="text"
+          value="http://{{ host }}{{ idea.referral_link }}"
+          class="input"
+          id="referral-link"
+        >
+        <div>
+          <button
+            class="button button--copy"
+            data-clipboard-target="#referral-link"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div>
-    <i>or share to</i>
+  <footer class="page-footer">
+    {% include 'networks' %}
+  </footer>
+</div>
+
+{% if space.product_image != empty and space.layout == "two-column" %}
+  <div class="wrapper__image">
+    <img src="{{ space.product_image }}"/>
   </div>
-  <br>
-
-  <div id="fb-root"></div>
-  <div class="share-bar" data-url="{{ space.permalink }}" data-image-url="{{ space.share_image }}"></div>
-
-  <script>
-    el =  document.getElementsByClassName("share-bar")[0];
-    url = "http://"+location.host+"{{ idea.referral_link }}";
-    el.setAttribute("data-title", "{{space.social_messaging}}");
-    el.setAttribute("data-url", url);
-  </script>
 {% endif %}

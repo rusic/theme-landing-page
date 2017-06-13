@@ -1,0 +1,14 @@
+{% if space.logo == empty %}
+  <img
+    width="128"
+    src="{{ 'logo.png' | image_url }}"
+    class="logo"
+    alt="{{ space.title }}"
+  >
+{% else %}
+  <img
+    src="{{ space.logo }}"
+    class="logo"
+    alt="{{ space.title }}"
+  >
+{% endif %}

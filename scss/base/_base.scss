@@ -2,6 +2,11 @@ body {
   background-size: cover;
   background-repeat: repeat;
   background-position: 50% 50%;
-  background-color: $color-dark;
+  background-color: #8ca2b0;
   color: $text-color;
+  background-image: url("{{ 'background.jpg' | asset_url }}");
+}
+
+img {
+  max-width: 100%;
 }
