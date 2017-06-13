@@ -3,13 +3,10 @@ html {
 }
 
 body {
-  font: 1.6em/1.5 'Hind', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3 {
-  font-family: 'Montserrat', serif;
 }
 
 h1 {

@@ -81,6 +81,25 @@ custom_attribute_collections:
     help_title: Styling
     help_body: Customise the design of your landing page.
     attributes:
+      type_primary:
+        value: "Hind"
+        type: select
+        select_options:
+          - "Hind"
+          - "Merriweather"
+          - "Cardo"
+          - "Alegreya"
+        help_text: Select a primary font, used for body copy
+      type_secondary:
+        value: "Montserrat"
+        type: select
+        select_options:
+          - "Quicksand"
+          - "Oswald"
+          - "Montserrat"
+          - "Lato"
+          - "Nunito"
+        help_text: Select a secondary font, used for headings
       layout:
         value: "one-column"
         type: select
