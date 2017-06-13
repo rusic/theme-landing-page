@@ -1,6 +1,10 @@
 {% if space.twitter_url != empty || space.facebook_url != empty || space.linkedin_url != empty %}
 
   <ul class="network-list">
+    <li class="network-list__item">
+      Follow us on
+    </li>
+
     {% if space.twitter_url != empty %}
       <li class="network-list__item">
         <a href="{{ space.twitter_url }}" target="_blank" class="icon">

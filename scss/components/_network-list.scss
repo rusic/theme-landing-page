@@ -1,11 +1,12 @@
 .network-list {
   list-style: none;
   padding: 0;
-  font-size: 0;
   margin: 32px 0 0 0;
 
   &__item {
     display: inline-block;
     margin: 0 6px;
+    vertical-align: middle;
+    line-height: 1;
   }
 }
