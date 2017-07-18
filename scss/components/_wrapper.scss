@@ -8,16 +8,15 @@
   }
 
   &--two-column {
-
     @include above($two-column-break) {
       max-width: 800px;
       display: flex;
       flex-direction: row-reverse;
+      align-items: center;
 
       .page-header,
       .page-footer,
-      .share
-      {
+      .share {
         text-align: left;
       }
     }
@@ -28,10 +27,19 @@
 
     @include above($two-column-break) {
       margin-top: 0;
+      flex: 1;
+      padding-right: 48px;
+      text-align: right;
     }
 
     .wrapper--one-column & {
       display: none;
+    }
+  }
+
+  &__content {
+    @include above($two-column-break) {
+      flex: 1;
     }
   }
 }
