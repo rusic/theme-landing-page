@@ -3,7 +3,7 @@ custom_attribute_collections:
   settings:
     title: Settings
     help_title: Settings
-    help_body: General settings
+    help_body: Choose what information you would like to collect, add you favicon and insert your Google Analytics tracking ID.
     attributes:
       collect_name:
         type: boolean
@@ -18,28 +18,17 @@ custom_attribute_collections:
         value: "//rusic.com/favicon.ico"
         help_text: Upload your favicon
       google_analytics:
-        type: textarea
         value: ""
-        help_text: "Insert your full Google Analytics code"
+        help_text: "Insert your Google Analytics tracking ID e.g. UA-00000000-1"
 
   social:
     title: Social
-    help_title: Social
-    help_body: Social settings
+    help_title: Social Settings
+    help_body: If you want to display links to your social profiles in the landing page footer add the URLs here.
     attributes:
-      share_description:
-        value: ""
-        help_text: Text displayed when sharing to social sites
-      share_image:
-        type: file
-        value: ""
-        help_text: Specify an image for using when sharing to social networks
       twitter_url:
         value: ""
         help_text: URL to your Twitter profile
-      twitter_username:
-        value: ""
-        help_text: User name without @, e.g. simpleweb
       facebook_url:
         value: ""
         help_text: URL to your Facebook profile
@@ -53,39 +42,27 @@ custom_attribute_collections:
     help_body: Customise the messaging and text used throughout the landing page.
     attributes:
       heading:
-        value: "Our website is coming soon"
+        value: "e.g. Our product is coming soon"
         help_text: The heading on the initial page
       sub_heading:
-        value: "Cras sodales sem fringilla ligula accumsan, rutrum consectetur ex gravida."
+        value: "e.g. Our product is a social network for cats 😺"
         help_text: The subheading on the initial page
       signup_message:
-        value: "Sign up for updates"
+        value: "e.g. Sign up for updates"
         help_text: A message to prompt users to sign up
       thank_you_message:
         value: "Thank you for signing up!"
-        help_text: A message to display after they sign up
-      social_messaging:
-        value: ""
-        help_text: "The text shown when sharing"
+        help_text: A message to replace your header copy on the sign up confirmation page
       share_message:
         value: "Share this link to get access even quicker when people sign up with your referral link"
+        help_text: A message to encourage users to share their unique referral link
 
-  content:
-    title: Content
-    help_title: Content
-    help_body: Content used throughout the site
+  fonts:
+    title: Fonts
+    help_title: Fonts
+    help_body: "Select a font for your header and body copy"
     attributes:
-      product_image:
-        type: file
-        value: ""
-        help_text: Your product image, screenshot of your app on an iPhone
-
-  styling:
-    title: Styling
-    help_title: Styling
-    help_body: Customise the design of your landing page.
-    attributes:
-      type_primary:
+      body_font:
         value: "Hind"
         type: select
         select_options:
@@ -93,8 +70,8 @@ custom_attribute_collections:
           - "Merriweather"
           - "Cardo"
           - "Alegreya"
-        help_text: Select a primary font, used for body copy
-      type_secondary:
+        help_text: Select a font to be used for your copy
+      heading_font:
         value: "Montserrat"
         type: select
         select_options:
@@ -103,14 +80,17 @@ custom_attribute_collections:
           - "Montserrat"
           - "Lato"
           - "Nunito"
-        help_text: Select a secondary font, used for headings
-      layout:
-        value: "one-column"
-        type: select
-        select_options:
-          - "one-column"
-          - "two-column"
-        help_text: Set the layout of your theme
+        help_text: Select a font to be used for your headings
+
+  styling:
+    title: Branding
+    help_title: Branding
+    help_body: Customize the design of your landing page.
+    attributes:
+      product_image:
+        type: file
+        value: ""
+        help_text: If want to display an image of your product, upload it here, otherwise leave this blank
       logo:
         value: ""
         type: file
@@ -118,11 +98,11 @@ custom_attribute_collections:
       background_color:
         type: color
         value: ""
-        help_text: Select a background color
+        help_text: Select a background color, this will only be used when you have no background image.
       background_image:
         type: file
         value: ""
-        help_text: Upload an image to fill the background
+        help_text: We recommend you upload an image at least 1024x1024px in size, you can also leave this blank if you want to just have a solid background color.
       text_color:
         type: color
         value: ""
@@ -130,15 +110,15 @@ custom_attribute_collections:
       button_color:
         type: color
         value: ""
-        help_text: Select a color for the buttons
+        help_text: Select a color for the sign up button
       button_hover_color:
         type: color
         value: ""
-        help_text: Select a color for the buttons hover
+        help_text: This is the color the button will turn when you hover over it
       button_text_color:
         type: color
         value: ""
-        help_text: Select a color for the button text
+        help_text: Select a color for the text on the button
       wrapper_background:
         type: color
         value: ""
