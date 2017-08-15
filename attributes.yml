@@ -24,7 +24,7 @@ custom_attribute_collections:
   social:
     title: Social
     help_title: Social Settings
-    help_body: If you want to display links to your social profiles in the landing page footer add the URLs here.
+    help_body: If you want to display links to your social profiles in the landing page footer add the URLs here.<br><br>Please make sure all image size is less than 2MB.
     attributes:
       twitter_url:
         value: ""
@@ -85,7 +85,7 @@ custom_attribute_collections:
   styling:
     title: Branding
     help_title: Branding
-    help_body: Customize the design of your landing page.
+    help_body: Customize the design of your landing page.<br><br>Please make sure all image size is less than 2MB.
     attributes:
       product_image:
         type: file
