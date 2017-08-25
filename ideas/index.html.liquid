@@ -35,18 +35,19 @@
         </div>
       {% endif %}
 
-      {% if space.collect_postcode == '1' %}
-        <div class="form__field">
-          <input
-            type="text"
-            class="input"
-            name="idea[custom][postcode]"
-            placeholder="Your postcode"
-            required
-          >
-        </div>
-      {% endif %}
     </div>
+
+    {% if space.collect_postcode == '1' %}
+      <div class="form__field">
+        <input
+          type="text"
+          class="input"
+          name="idea[custom][postcode]"
+          placeholder="Your postcode"
+          required
+        >
+      </div>
+    {% endif %}
 
     <div class="form__field">
       <input

@@ -5,10 +5,14 @@ custom_attribute_collections:
     help_title: Settings
     help_body: Choose what information you would like to collect, add you favicon and insert your Google Analytics tracking ID.
     attributes:
-      collect_name:
+      collect_first_name:
         type: boolean
         value: "0"
-        help_text: Optionally collect the user’s name when signing up
+        help_text: Optionally collect the user’s first name when signing up
+      collect_last_name:
+        type: boolean
+        value: "0"
+        help_text: Optionally collect the user’s last name when signing up
       collect_postcode:
         type: boolean
         value: "0"
