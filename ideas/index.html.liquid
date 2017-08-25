@@ -11,13 +11,25 @@
     <input type="hidden" name="idea[content]" value="BLANK">
 
     <div class="form__group">
-      {% if space.collect_name == '1' %}
+      {% if space.collect_first_name == '1' %}
         <div class="form__field">
           <input
             type="text"
             class="input"
-            name="idea[custom][full_name]"
-            placeholder="Your name"
+            name="idea[custom][FNAME]"
+            placeholder="Your first name"
+            required
+          >
+        </div>
+      {% endif %}
+
+      {% if space.collect_last_name == '1' %}
+        <div class="form__field">
+          <input
+            type="text"
+            class="input"
+            name="idea[custom][LNAME]"
+            placeholder="Your last name"
             required
           >
         </div>
