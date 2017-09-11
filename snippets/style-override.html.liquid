@@ -1,12 +1,5 @@
 <style>
 
-  {% if space.background_color != empty %}
-    body {
-      background-color: {{ space.background_color }};
-      background-image: none;
-    }
-  {% endif %}
-
   {% if space.background_image != empty %}
     body {
       background-image: url({{ space.background_image }});

@@ -97,7 +97,7 @@ custom_attribute_collections:
         help_text: Upload your logo
       background_color:
         type: color
-        value: ""
+        value: "#8fa0b0"
         help_text: Select a background color, this will only be used when you have no background image.
       background_image:
         type: file
