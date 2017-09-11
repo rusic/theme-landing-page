@@ -109,7 +109,7 @@ custom_attribute_collections:
         help_text: Select a color for the text
       button_color:
         type: color
-        value: ""
+        value: "#b92e7b"
         help_text: Select a color for the sign up button
       button_hover_color:
         type: color
