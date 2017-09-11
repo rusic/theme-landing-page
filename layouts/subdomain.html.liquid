@@ -31,7 +31,10 @@
       </script>
     {% endif %}
   </head>
-  <body style="background-color: {{ space.background_color }};">
+  <body style="
+    background-color: {{ space.background_color }};
+    font-family: {{ space.body_font }};
+  ">
 
     <div class="center">
       <main class="wrapper wrapper--{% if space.product_image != empty %}two-column{% else %}one-column{% endif %}">
