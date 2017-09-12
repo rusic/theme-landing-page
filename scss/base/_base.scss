@@ -3,7 +3,6 @@ body {
   background-repeat: repeat;
   background-position: 50% 50%;
   color: $text-color;
-  background-image: url("{{ 'background.jpg' | asset_url }}");
 }
 
 img {
