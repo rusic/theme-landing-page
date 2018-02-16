@@ -8,71 +8,82 @@
     <h2 style="font-family: {{ space.heading_font }}">
       {{ space.signup_message }}
     </h2>
+    {% if space.show_cta == '1' %}
+      <a
+        href="{{ space.cta_link }}"
+        class="button"
+        style="background-color: {{ space.button_color }}"
+      >
+        {{ space.cta_text }}
+      </a>
+    {% endif %}
   </header>
 
-  <form action="{{ space.permalink }}/ideas" method="post" class="form">
-    <input type="hidden" name="idea[title]" value="BLANK">
-    <input type="hidden" name="idea[content]" value="BLANK">
+  {% if space.hide_form != '1' %}
+    <form action="{{ space.permalink }}/ideas" method="post" class="form">
+      <input type="hidden" name="idea[title]" value="BLANK">
+      <input type="hidden" name="idea[content]" value="BLANK">
 
-    <div class="form__group">
-      {% if space.collect_first_name == '1' %}
+      <div class="form__group">
+        {% if space.collect_first_name == '1' %}
+          <div class="form__field">
+            <input
+              type="text"
+              class="input"
+              name="idea[custom][FNAME]"
+              placeholder="Your first name"
+              required
+            >
+          </div>
+        {% endif %}
+
+        {% if space.collect_last_name == '1' %}
+          <div class="form__field">
+            <input
+              type="text"
+              class="input"
+              name="idea[custom][LNAME]"
+              placeholder="Your last name"
+              required
+            >
+          </div>
+        {% endif %}
+
+      </div>
+
+      {% if space.collect_postcode == '1' %}
         <div class="form__field">
           <input
             type="text"
             class="input"
-            name="idea[custom][FNAME]"
-            placeholder="Your first name"
+            name="idea[custom][postcode]"
+            placeholder="Your postcode"
             required
           >
         </div>
       {% endif %}
 
-      {% if space.collect_last_name == '1' %}
-        <div class="form__field">
-          <input
-            type="text"
-            class="input"
-            name="idea[custom][LNAME]"
-            placeholder="Your last name"
-            required
-          >
-        </div>
-      {% endif %}
-
-    </div>
-
-    {% if space.collect_postcode == '1' %}
       <div class="form__field">
         <input
-          type="text"
+          type="email"
           class="input"
-          name="idea[custom][postcode]"
-          placeholder="Your postcode"
+          name="identity[email]"
+          placeholder="Enter your email"
           required
         >
       </div>
-    {% endif %}
 
-    <div class="form__field">
-      <input
-        type="email"
-        class="input"
-        name="identity[email]"
-        placeholder="Enter your email"
-        required
-      >
-    </div>
-
-    <div class="form__field">
-      <button
-        type="submit"
-        class="button button--submit"
-        style="background-color: {{ space.button_color }}"
-      >
-        Sign up
-      </button>
-    </div>
-  </form>
+      <div class="form__field">
+        <button
+          type="submit"
+          class="button button--submit"
+          style="background-color: {{ space.button_color }}"
+        >
+          Sign up
+        </button>
+      </div>
+    </form>
+  {% endif %}
 
   <footer class="page-footer">
     {% include 'networks' %}

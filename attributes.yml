@@ -5,6 +5,20 @@ custom_attribute_collections:
     help_title: Settings
     help_body: Choose what information you would like to collect, add you favicon and insert your Google Analytics tracking ID.
     attributes:
+      show_cta:
+        type: boolean
+        value: "0"
+        help_text: Optionally show call to action
+      cta_text:
+        help_text: Text for the call to action
+        value: ""
+      cta_link:
+        help_text: URL for the call to action
+        value: ""
+      hide_form:
+        type: boolean
+        value: "0"
+        help_text: Optionally hide the form
       collect_first_name:
         type: boolean
         value: "0"
