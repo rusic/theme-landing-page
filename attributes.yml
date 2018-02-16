@@ -101,7 +101,7 @@ custom_attribute_collections:
         help_text: Upload your logo
       background_color:
         type: color
-        value: ""
+        value: "#8fa0b0"
         help_text: Select a background color, this will only be used when you have no background image.
       background_image:
         type: file
@@ -113,7 +113,7 @@ custom_attribute_collections:
         help_text: Select a color for the text
       button_color:
         type: color
-        value: ""
+        value: "#b92e7b"
         help_text: Select a color for the sign up button
       button_hover_color:
         type: color

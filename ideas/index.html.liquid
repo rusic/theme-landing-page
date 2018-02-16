@@ -1,9 +1,13 @@
 <div class="wrapper__content">
   <header class="page-header">
     {% include 'logo' %}
-    <h1>{{ space.heading }}</h1>
+    <h1 style="font-family: {{ space.heading_font }}">
+      {{ space.heading }}
+    </h1>
     <p>{{ space.sub_heading }}</p>
-    <h2>{{ space.signup_message }}</h2>
+    <h2 style="font-family: {{ space.heading_font }}">
+      {{ space.signup_message }}
+    </h2>
   </header>
 
   <form action="{{ space.permalink }}/ideas" method="post" class="form">
@@ -60,7 +64,11 @@
     </div>
 
     <div class="form__field">
-      <button type="submit" class="button button--submit">
+      <button
+        type="submit"
+        class="button button--submit"
+        style="background-color: {{ space.button_color }}"
+      >
         Sign up
       </button>
     </div>

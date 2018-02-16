@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="{{ space.favicon }}">
     <link
       rel="stylesheet"
-      href="//fonts.googleapis.com/css?family={{ space.type_primary }}:400,700|{{ space.type_secondary }}:400,700"
+      href="//fonts.googleapis.com/css?family={{ space.body_font }}:400,700|{{ space.heading_font }}:400,700"
     >
 
     <link rel="stylesheet" href="{{ 'style.css' | stylesheet_url }}">
@@ -31,17 +31,22 @@
       </script>
     {% endif %}
   </head>
-  <body>
+  <body style="
+    background-color: {{ space.background_color }};
+    font-family: {{ space.body_font }};
+  ">
 
     <div class="center">
       <main class="wrapper wrapper--{% if space.product_image != empty %}two-column{% else %}one-column{% endif %}">
         {{ yield }}
       </main>
+      <p class="footer-promo">Powered by Rusic, <a href="https://rusic.com">create your own landing page in two minutes for free</a>.</p>
     </div>
 
     {% include "icons" %}
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="{{ 'main.js' | javascript_url }}"></script>
+    {{ content_for_footer }}
   </body>
 </html>

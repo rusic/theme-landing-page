@@ -1,8 +1,12 @@
 <div class="wrapper__content">
   <header class="page-header">
     {% include 'logo' %}
-    <h1>{{ space.thank_you_message }}</h1>
-    <h3 class="lead">{{ space.share_message }}</h3>
+    <h1 style="font-family: {{ space.heading_font }}">
+      {{ space.thank_you_message }}
+    </h1>
+    <h3 class="lead" style="font-family: {{ space.heading_font }}">
+      {{ space.share_message }}
+    </h3>
 
     {% if idea.referrals == 0 %}
       <p>No one has signed up with your link yet</p>
